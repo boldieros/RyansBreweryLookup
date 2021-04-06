@@ -12,7 +12,7 @@ import Feeder from "./components/Feeder"
 function App() {
   return (
     <div >
-      {/* <Results /> */}
+      <Navigation />
       <Feeder />
     </div>
   );
