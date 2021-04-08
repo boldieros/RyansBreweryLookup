@@ -14,7 +14,7 @@ function Results({key, name, street, website}) {
       return (
         <div className="collection">
         {/* <a href="#!" className="collection-item" key = {key}>{`${id}`}</a> */}
-        <a href={`${website}`} onClick = {`${website}`}  className="collection-item "key = {key}>{`${name}`} </a>
+        <a href="" onClick = {() => window.open(`${website}`,"_blank")} className="collection-item "key = {key}>{`${name}`} </a>
         {/* <a href="#!" className="collection-item" key = {key}>{`${street}`}</a> */}
         {/* <a href="#!" className="collection-item">Alvin</a> */}
       </div>
