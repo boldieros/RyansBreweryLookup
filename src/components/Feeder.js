@@ -28,8 +28,8 @@ return(
   
   <form onSubmit={handleSubmit}>
   <label>
-    Name:
-    <input type="text" value = {city} onChange ={e =>setCity(e.target.value)}/>
+
+    <input type="text" placeholder = "City" value = {city} onChange ={e =>setCity(e.target.value)}/>
   </label>
   {/* <input type="submit" defaultValue="Submit" onChange ={e =>setCity(e.target.value)}/> */}
 

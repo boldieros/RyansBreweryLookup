@@ -13,8 +13,8 @@ function App() {
   return (
     <div >
 
-      {/* <Navigation />
-      <Search /> */}
+     <Navigation />
+      {/* <Search />  */}
       <Feeder />
     </div>
   );
