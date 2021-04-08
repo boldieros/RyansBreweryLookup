@@ -5,6 +5,7 @@ import API from "../utils/API"
 import axios from "axios"
 import Results from "./Results"
 
+
 function Feeder(props){
 
   
@@ -39,7 +40,8 @@ return(
     {data.map(brews => (
       <li>
 
-        <Results  name= {brews.name} />
+        <Results  name= {brews.name} street = {brews.street} />
+
       </li>
     ))}
 
