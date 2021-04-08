@@ -37,3 +37,5 @@
     "updated_at": "2018-08-24T16:40:00.000Z",
     "created_at": "2018-07-24T01:34:00.000Z"
     },
+
+    // "devDependencies": {},

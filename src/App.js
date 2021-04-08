@@ -4,17 +4,15 @@ import 'materialize-css/dist/css/materialize.min.css';
 // import bootstrap from'bootstrap/dist/css/bootstrap.min.css';
 // import './App.css';
 import Navigation from './components/Navigation';
-import Results from './components/Results'
-import Search from "./components/Search"
-import Feeder from "./components/Feeder"
+import Results from './components/Results';
+import Search from "./components/Search";
+import Feeder from "./components/Feeder";
 
 
 function App() {
   return (
     <div >
-
-     <Navigation />
-      {/* <Search />  */}
+      <Navigation />
       <Feeder />
     </div>
   );
