@@ -14,8 +14,8 @@ function Results({key, name, street, website}) {
       return (
         <div className="collection">
         {/* <a href="#!" className="collection-item" key = {key}>{`${id}`}</a> */}
-        <a href="#!" onClick = {handleSubmit} className="collection-item "key = {key}>{`${name}`} </a>
-        <a href="#!" className="collection-item" key = {key}>{`${street}`}</a>
+        <a href={`${website}`} onClick = {`${website}`}  className="collection-item "key = {key}>{`${name}`} </a>
+        {/* <a href="#!" className="collection-item" key = {key}>{`${street}`}</a> */}
         {/* <a href="#!" className="collection-item">Alvin</a> */}
       </div>
     );
@@ -32,6 +32,7 @@ function Results({key, name, street, website}) {
 //     </div>
 //   </div>
 // </div>
-// );
+//       )}
+
 
   export default Results
