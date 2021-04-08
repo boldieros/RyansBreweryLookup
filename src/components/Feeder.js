@@ -5,24 +5,40 @@ import API from "../utils/API"
 import axios from "axios"
 import Results from "./Results"
 
-function Feeder(){
+function Feeder(props){
+
+  
   let [data, setData] = useState([])
 
   useEffect(() =>{
-    axios.get('https://api.openbrewerydb.org/breweries/search?query=Chicago')
+    axios.get('https://api.openbrewerydb.org/breweries/search?query=' + city)
     .then(results => setData(results.data)) 
-  }, [])
+  }, )
 
+  const [city, setCity] = useState("");
+  const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(city)
   
-
+  }
 
 return(
-  
 
-<div>
+  <div>
+  
+  <form onSubmit={handleSubmit}>
+  <label>
+    Name:
+    <input type="text" value = {city} onChange ={e =>setCity(e.target.value)}/>
+  </label>
+  {/* <input type="submit" defaultValue="Submit" onChange ={e =>setCity(e.target.value)}/> */}
+
+  </form>
+
    <ul>
     {data.map(brews => (
       <li>
+
         <Results  name= {brews.name} />
       </li>
     ))}
@@ -32,6 +48,7 @@ return(
 </div>
 )
 }
+
 
 
 export default Feeder 
