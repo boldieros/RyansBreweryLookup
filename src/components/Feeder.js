@@ -4,6 +4,7 @@ import React,{useEffect,useState}from "react"
 import API from "../utils/API"
 import axios from "axios"
 import Results from "./Results"
+import Map from "./Map"
 
 
 function Feeder(props){
@@ -20,14 +21,27 @@ function Feeder(props){
   const handleSubmit = (e) => {
   e.preventDefault();
   console.log(city)
-  
   }
 
-return(
-
-  <div>
+  // const [maps, setMaps] = useState([]);
+  // //check tuseState "" for errors
+  // useEffect(() =>{
+  //   axios.get(`https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
+  //   &q=` +brewName)
+  // }, )
+  //   .then(results => setMaps(results.data)) 
+  //   const [brewName, setBrewName] = useState("");
+  //   const handleSubmitTwo = (e) => {
+  //   e.preventDefault();
+  //   console.log(maps)
+  // }
   
-  <form onSubmit={handleSubmit}>
+  
+  return(
+
+  <div >
+  
+  <form  onSubmit={handleSubmit} style = {{width:`100%`}}>
   <label>
 
     <input type="text" placeholder = "City" value = {city} onChange ={e =>setCity(e.target.value)}/>
@@ -40,17 +54,32 @@ return(
     {data.map(brews => (
       <li>
 
-        <Results  name= {brews.name} street = {brews.street} website = {brews.website_url} />
+        
+        <Results  name= {brews.name} street = {brews.street} website = {brews.website_url} state = {brews.state} city = {brews.city} fullAddress = {brews.street+ brews.city +brews.state}   />
 
       </li>
+      
     ))}
+{/* {data.map(mapQuery => (
+  
+
+    <li>
+        <Map mapName = {mapQuery}/>
+
+    </li> */}
+{/* ))} */}
+
 
    </ul>
 
 </div>
 )
-}
+
+
+    }
 
 
 
-export default Feeder 
+export default Feeder
+
+

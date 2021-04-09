@@ -1,38 +1,38 @@
 import Feeder from "./Feeder"
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
+import axios from "axios"
 import bootstrap from'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Results({key, name, street, website}) {
+function Results({key, name, street, website, city, state, fullAddress}) {
 
-  const [streets, setStreets] = useState("");
-  const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log(streets)
+  // const [maps, setMaps] = useState([]);
+  // //check tuseState "" for errors
+  // useEffect(() =>{
+  //   axios.get(`https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
+  //   &q=` + name )
+  // }, [])
+  //   .then(results => setMaps(results.data)) 
+  //   console.log(maps)
   
-  }
-      return (
+
+
+
+
+  
+ return (
         <div className="collection">
         {/* <a href="#!" className="collection-item" key = {key}>{`${id}`}</a> */}
         <a href="" onClick = {() => window.open(`${website}`,"_blank")} className="collection-item "key = {key}>{`${name}`} </a>
         {/* <a href="#!" className="collection-item" key = {key}>{`${street}`}</a> */}
-        {/* <a href="#!" className="collection-item">Alvin</a> */}
-      </div>
-    );
-  }
+        <a href="" onClick = {<iframe width={400} height={300} style={{border: 0, marginRight:0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
+        &q= +"{`${name}`}> </iframe>} className="collection-item">Maps</a>
+        
+        
+        
+        <iframe width={400} height={300} style={{border: 0, marginRight:0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
+        &q=Sound and SUmmit"> </iframe>
 
-//   <div>
-//   <button className="btn btn-outline-success btn-block " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"key = {key}>
-//   {`${name}`}
-//   </button>
-//   <p />
-//   <div className="collapse" id="collapseExample">
-//     <div className="card card-body">
-//       Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-//     </div>
-//   </div>
-// </div>
-//       )}
-
-
+</div>
+ )}
   export default Results

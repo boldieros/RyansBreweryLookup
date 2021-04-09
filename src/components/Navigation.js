@@ -15,7 +15,7 @@ function Navigation() {
         </ul>
         <nav>
           <div className="nav-wrapper teal lighten-2">
-            <a href="#!" className="brand-logo">Brewery Lookup</a>
+            <li className="brand-logo">Brewery Lookup</li>
             <ul className="right hide-on-med-and-down">
               <li><a href="sass.html">About Us</a></li>
               <li><a href="badges.html">Updates</a></li>
