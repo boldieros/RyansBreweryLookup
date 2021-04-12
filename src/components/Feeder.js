@@ -5,6 +5,9 @@ import API from "../utils/API"
 import axios from "axios"
 import Results from "./Results"
 import Map from "./Map"
+import Container from "./Container"
+
+
 
 
 function Feeder(props){
@@ -20,7 +23,7 @@ function Feeder(props){
   const [city, setCity] = useState("");
   const handleSubmit = (e) => {
   e.preventDefault();
-  console.log(city)
+  // console.log(city)
   }
 
   // const [maps, setMaps] = useState([]);
@@ -39,8 +42,10 @@ function Feeder(props){
   
   return(
 
-  <div >
-  
+    <div className = "backgroundHome"  style={{ 
+      backgroundImage: `url(/public/image/beers-1283566_1920.jpg)`,   backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat', height: `1960px`, width:`100%`,backgroundPosition: `center center`
+    }}>
   <form  onSubmit={handleSubmit} style = {{width:`100%`}}>
   <label>
 
