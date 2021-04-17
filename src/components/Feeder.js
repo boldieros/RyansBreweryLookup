@@ -47,7 +47,7 @@ function Feeder(props){
       backgroundRepeat: 'no-repeat', height: `1960px`, width:`100%`,backgroundPosition: `center center`
     }}>
   <form  onSubmit={handleSubmit} style = {{width:`100%`}}>
-  <label style = {{width:`100%`}}>
+  <label style = {{width:`100%`, textAlign: `center`}} >
 
     <input type="text" style = {{width:`100%`}} placeholder = "City" value = {city} onChange ={e =>setCity(e.target.value)}/>
   </label>
