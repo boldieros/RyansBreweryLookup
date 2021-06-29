@@ -6,14 +6,14 @@ import bootstrap from'bootstrap/dist/css/bootstrap.min.css';
 
 function Results({key, name, street, website, city, state, fullAddress}) {
 
-  const [maps, setMaps] = useState([]);
-  //check tuseState "" for errors
-  useEffect(() =>{
-    axios.get(`https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
-    &q=` + city )
-  }, [] )
-    .then(results => setMaps(results.data)) 
-    console.log(maps)
+  // const [maps, setMaps] = useState([]);
+  // //check tuseState "" for errors
+  // useEffect(() =>{
+  //   axios.get(`https://www.google.com/maps/embed/v1/place?key=AIzaSyCfcAaKlRbP10QUCCdw2mhmV0ts9vAgp-M
+  //   &q=` + city )
+  // }, [] )
+  //   .then(results => setMaps(results.data)) 
+  //   console.log(maps)
 
 
 
@@ -28,7 +28,7 @@ function Results({key, name, street, website, city, state, fullAddress}) {
         {/* <a href=""  className="collection-item">Maps</a> */}
         
         
-        
+{/*         
         {/* <iframe width={400} height={300} style={{border: 0, marginRight:0}} loading="lazy" allowFullScreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyConOxgTJ3swIM23X024RVEG5T5vMc4-Ug
         &q=   +  "  ></iframe> */}
 
